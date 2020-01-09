@@ -3,6 +3,10 @@ extends KinematicBody2D
 # Speed of the Ball, can be changed in Inspector
 export var speed = 500
 
+# Rotation of the Ball, can be changed in Inspector
+export var rotation_rate = 100
+var rotation_speed = deg2rad(rotation_rate)
+
 # A 0, 0 velocity vector
 var velocity = Vector2()
 
@@ -14,7 +18,12 @@ func start(pos, dir):
 
 # Upon collision, move in direction of the normal
 func _physics_process(delta):
+	
+	# Rotate the Ball
+	rotate(rotation_speed * delta)
+	
 	var collision = move_and_collide(velocity * delta)
+	
 	if collision:
 		$'../CollisionSound'.play()
 		velocity = velocity.bounce(collision.normal)
