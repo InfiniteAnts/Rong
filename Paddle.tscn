@@ -7,6 +7,8 @@
 extents = Vector2( 9.50041, 43.1249 )
 
 [node name="Paddle" type="StaticBody2D"]
+modulate = Color( 1, 0.917647, 0.929412, 1 )
+self_modulate = Color( 1, 0.917647, 0.929412, 1 )
 position = Vector2( 16.7437, 49.7372 )
 script = ExtResource( 1 )
 __meta__ = {

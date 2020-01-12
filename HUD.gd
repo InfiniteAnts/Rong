@@ -28,8 +28,13 @@ func _on_StartButton_pressed():
 	Global.game_started = true
 	emit_signal('start_game')
 
+	# Play the music
+	$'../GameMusic'.play()
 # When game is over,
 func show_game_over():
+	
+	# Stop the music
+	$'../GameMusic'.stop()
 	
 	# Play the GameOverSound
 	$'../GameOverSound'.play()

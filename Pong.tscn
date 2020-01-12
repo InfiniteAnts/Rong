@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Pong.gd" type="Script" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game_over.wav" type="AudioStream" id=3]
 [ext_resource path="res://Blip_select 3.wav" type="AudioStream" id=4]
+[ext_resource path="res://Arcade-Puzzler.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 105.724, 10 )
@@ -65,11 +66,14 @@ mix_target = 1
 stream = ExtResource( 4 )
 mix_target = 1
 
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.133333, 0.247059, 0.290196, 1 )
+color = Color( 0.0313726, 0.2, 0.337255, 1 )
 [connection signal="start_game" from="HUD" to="." method="new_game"]
