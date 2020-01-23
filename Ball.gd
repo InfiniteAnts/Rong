@@ -19,6 +19,9 @@ func _physics_process(delta):
 		$'../CollisionSound'.play()
 		velocity = velocity.bounce(collision.normal)
 		
+		# Shake the screen
+		$'../Camera2D/ScreenShake'.start()
+		
 		# Increment score when ball collides with the right wall
 		if collision.collider.name == 'RightWall':
 			Global.score += 1
