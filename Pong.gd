@@ -3,15 +3,11 @@ extends Node2D
 # Preload the paddle and ball scenes
 const PADDLE = preload('res://Paddle.tscn')
 const BALL = preload('res://Ball.tscn')
-const SCREENSHAKE = preload('res://ScreenShake.tscn')
 
 var rng = RandomNumberGenerator.new()
 
 func _ready():
 	# Randomize the seed
-	#var screenshake = SCREENSHAKE.instance()
-	#self.add_child(screenshake)
-	
 	rng.randomize()
 
 func _physics_process(delta):

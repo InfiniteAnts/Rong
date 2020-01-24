@@ -15,7 +15,7 @@ font_data = ExtResource( 2 )
 size = 255
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 64
 font_data = ExtResource( 2 )
 
@@ -74,7 +74,7 @@ margin_top = 36.0
 margin_right = 948.0
 margin_bottom = 108.0
 size_flags_horizontal = 15
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 align = 1
 
 [node name="LastScoreLabel" type="Label" parent="ScoreContainer"]
