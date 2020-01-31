@@ -69,8 +69,8 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="RightWall"]
-position = Vector2( -1.18756, -0.83014 )
-scale = Vector2( 3.73508, 0.225702 )
+position = Vector2( -1.20225, -0.83014 )
+scale = Vector2( 3.73152, 0.225702 )
 texture = ExtResource( 2 )
 
 [node name="PaddlePosition" type="Position2D" parent="."]
@@ -113,7 +113,6 @@ __meta__ = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
 __meta__ = {
 "_edit_lock_": true
 }

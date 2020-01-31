@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled_bounce.png-890f6364e739189a06067172e6349f9e.stex"
+path="res://.import/BootSplash.png-387a6805e0444ee48a86299f1b763603.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Untitled_bounce.png"
-dest_files=[ "res://.import/Untitled_bounce.png-890f6364e739189a06067172e6349f9e.stex" ]
+source_file="res://BootSplash.png"
+dest_files=[ "res://.import/BootSplash.png-387a6805e0444ee48a86299f1b763603.stex" ]
 
 [params]
 
