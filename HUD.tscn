@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://HUD.gd" type="Script" id=1]
 [ext_resource path="res://subpixel-a/subpixel-a.ttf" type="DynamicFontData" id=2]
@@ -23,6 +23,14 @@ font_data = ExtResource( 2 )
 size = 64
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+font_data = ExtResource( 2 )
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
 
@@ -38,6 +46,7 @@ margin_bottom = 95.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
@@ -109,4 +118,39 @@ align = 1
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="CreditsButton" type="Button" parent="."]
+modulate = Color( 1, 0.917647, 0.929412, 1 )
+self_modulate = Color( 1, 0.917647, 0.929412, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -465.0
+margin_right = -39.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 6 )
+text = "Credits"
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+visible = false
+modulate = Color( 1, 0.917647, 0.929412, 1 )
+self_modulate = Color( 1, 0.917647, 0.929412, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "Game by Anant Ahuja
+
+Music by Eric Matyas
+www.soundimage.org"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]

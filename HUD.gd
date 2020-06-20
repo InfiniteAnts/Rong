@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal start_game
 
+var credits_screen = false
+
 # Update score
 func update_score(score):
 	$ScoreLabel.text = str(score)
@@ -19,6 +21,9 @@ func _on_StartButton_pressed():
 	$'ScoreContainer/LastScoreLabel'.hide()
 	$'ScoreContainer/BestScoreLabel'.hide()
 	
+	# Hide credits button
+	$CreditsButton.hide()
+	
 	# Show the score
 	Global.score = 0
 	update_score(Global.score)
@@ -30,6 +35,7 @@ func _on_StartButton_pressed():
 
 	# Play the music
 	$'../GameMusic'.play()
+	
 # When game is over,
 func show_game_over():
 	
@@ -57,3 +63,40 @@ func show_game_over():
 	$MessageLabel.show()
 	$'ScoreContainer/LastScoreLabel'.show()
 	$'ScoreContainer/BestScoreLabel'.show()
+	
+	# Show the Credits button
+	$CreditsButton.show()
+
+func _on_CreditsButton_pressed():
+
+	if not credits_screen:
+		
+		credits_screen = true
+		
+		# Hide Start Menu
+		$StartButton.hide()
+		$MessageLabel.hide()
+		$'ScoreContainer/LastScoreLabel'.hide()
+		$'ScoreContainer/BestScoreLabel'.hide()
+		
+		# Change CreditsButton Text to Main Menu
+		$CreditsButton.text = "Main Menu"
+
+		# Show the Credits
+		$Credits.show()
+
+	else:
+		
+		credits_screen = false
+		
+		# Hide the Credits
+		$Credits.hide()
+		
+		# Show STart Menu 
+		$StartButton.show()
+		$MessageLabel.show()
+		$'ScoreContainer/LastScoreLabel'.show()
+		$'ScoreContainer/BestScoreLabel'.show()
+		
+		# Change CreditsButton Text to Credits
+		$CreditsButton.text = 'Credits'
